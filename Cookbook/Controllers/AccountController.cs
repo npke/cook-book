@@ -41,7 +41,7 @@ namespace Cookbook.Controllers
 
             try
             {
-                var json = client.DownloadString(String.Format("http://kcpmapi-1.apphb.com/api/NguoiDung/Get/{0}", id));
+                var json = client.DownloadString(String.Format("http://c00k-b00k-api.apphb.com/api/NguoiDung/Get/{0}", id));
                 var serializer = new System.Web.Script.Serialization.JavaScriptSerializer();
                 dynamic model = serializer.Deserialize<dynamic>(json);
 
@@ -53,7 +53,7 @@ namespace Cookbook.Controllers
             {
                 Session["IsNewUser"] = Boolean.TrueString;
 
-                Account account = new Account("hl6ei8egh", "132439745671385", "f7bunvOJ6Fg6Bqynodcx5TRQfaY");
+                Account account = new Account("dgo3sbt33", "167217248358385", "whetWWgw-vzAJAX_AoBEQ6KAaY8");
                 Cloudinary cloudinary = new Cloudinary(account);
 
                 var uploadParams = new ImageUploadParams()
